@@ -1,0 +1,6 @@
+Resources I need ?
+1. IAM User
+2. IAM Groups
+3. Assign Users to Groups
+4. Password Policy
+5. Assign Permissions
