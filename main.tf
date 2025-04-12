@@ -49,10 +49,10 @@ resource "aws_iam_group_policy_attachment" "sysadmin_full_access" {
 
 resource "aws_iam_group_policy_attachment" "dbadmin_full_access" {
   group      = aws_iam_group.default["database_admins"].name
-  policy_arn = "arn:aws:iam::aws:policy/DatabaseAdministrator"
+  policy_arn = "arn:aws:iam::aws:policy/job-function/DatabaseAdministrator"
 }
 
 resource "aws_iam_group_policy_attachment" "read_only" {
-  group      = aws_iam_group.default["database_admins"].name
-  policy_arn = "arn:aws:iam::aws:policy/AmazonConnectReadOnlyAccess"
+  group      = aws_iam_group.default["read_only"].name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonMonitronFullAccess"
 }
