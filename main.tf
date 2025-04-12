@@ -2,9 +2,9 @@ variable "groups" {
   type        = map(list(string))
   description = "A map of IAM groups with their associated user lists"
   default = {
-    "system_admins" = [ "system_admin_1", "system_admin_2", "system_admin_3" ]
-    "database_admins" = [ "database_admin_1", "database_admin_2", "database_admin_3" ]
-    "read_only" = [ "read_only_1", "read_only_2", "read_only_3" ]
+    "system_admins"   = ["system_admin_1", "system_admin_2", "system_admin_3"]
+    "database_admins" = ["database_admin_1", "database_admin_2", "database_admin_3"]
+    "read_only"       = ["read_only_1", "read_only_2", "read_only_3"]
   }
 }
 
