@@ -1,3 +1,13 @@
+terraform {  
+  backend "s3" {  
+    bucket       = "mytfstatebackend"  #Name of the s3 bucket
+    key          = "terraform.tfstate" # Name of the file
+    region       = "us-east-1"  # Region
+    encrypt      = true  
+    use_lockfile = true  #S3 native locking
+  }  
+}
+
 variable "groups" {
   type        = map(list(string))
   description = "A map of IAM groups with their associated user lists"
